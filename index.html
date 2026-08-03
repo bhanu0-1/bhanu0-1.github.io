@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhanu Prakash Jajapuram | Business Process &amp; Data Analyst</title>
+<meta name="description" content="Bhanu Prakash Jajapuram — Business Process Analyst & Power BI Developer. 3+ years across fraud & ops, PwC consulting, and retail analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF1EE;
+    --paper-raised:#E4E9E3;
+    --ink:#152430;
+    --ink-soft:#4B5A62;
+    --navy-deep:#101B26;
+    --navy-deep-2:#16232F;
+    --gold:#B9832F;
+    --gold-soft:#E7C68C;
+    --teal:#3E6F6A;
+    --flag:#9C3B34;
+    --rule:rgba(21,36,48,0.14);
+    --rule-dark:rgba(238,241,238,0.16);
+    --font-display:'Newsreader', serif;
+    --font-body:'Space Grotesk', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 32px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+
+  /* ---------- Nav ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(238,241,238,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:1080px; margin:0 auto; padding:16px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  @media(max-width:640px){.nav-inner{padding:14px 20px;}}
+  .nav-mark{
+    font-family:var(--font-mono); font-size:13px; letter-spacing:.06em;
+    color:var(--ink); text-decoration:none; font-weight:600;
+  }
+  .nav-mark span{color:var(--gold);}
+  .nav-links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    font-family:var(--font-mono); font-size:12.5px; letter-spacing:.08em;
+    text-transform:uppercase; text-decoration:none; color:var(--ink-soft);
+    position:relative; padding-bottom:3px; transition:color .2s ease;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible{color:var(--ink);}
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:1px;
+    background:var(--gold); transition:width .25s ease;
+  }
+  .nav-links a:hover::after, .nav-links a:focus-visible::after{width:100%;}
+  @media(max-width:700px){.nav-links{display:none;}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--navy-deep);
+    color:var(--paper);
+    position:relative;
+    overflow:hidden;
+    padding:96px 0 64px;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--rule-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule-dark) 1px, transparent 1px);
+    background-size:38px 38px;
+    opacity:.35;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 20%, black 40%, transparent 90%);
+  }
+  .hero-inner{position:relative; z-index:1;}
+  .file-tag{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-mono); font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--gold-soft);
+    border:1px solid rgba(231,198,140,0.35);
+    padding:6px 12px; border-radius:2px;
+    margin-bottom:28px;
+  }
+  .file-tag::before{content:'●'; color:var(--gold); font-size:8px;}
+  .hero h1{
+    font-family:var(--font-display);
+    font-weight:500;
+    font-size:clamp(2.4rem, 5.4vw, 4.1rem);
+    line-height:1.05;
+    margin:0 0 18px;
+    max-width:14ch;
+  }
+  .hero .role-line{
+    font-family:var(--font-mono);
+    font-size:14px;
+    letter-spacing:.04em;
+    color:var(--gold-soft);
+    margin:0 0 22px;
+  }
+  .hero p.lede{
+    font-size:1.08rem;
+    color:#C9D3D1;
+    max-width:52ch;
+    margin:0 0 40px;
+  }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-mono); font-size:13px; letter-spacing:.04em;
+    padding:13px 22px; text-decoration:none; border-radius:2px;
+    transition:transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+  .btn-primary{background:var(--gold); color:var(--navy-deep); font-weight:600;}
+  .btn-primary:hover{background:var(--gold-soft); transform:translateY(-1px);}
+  .btn-ghost{border:1px solid rgba(238,241,238,0.35); color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--paper); transform:translateY(-1px);}
+
+  .ledger-stats{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+    border-top:1px solid var(--rule-dark);
+  }
+  @media(max-width:760px){.ledger-stats{grid-template-columns:repeat(2,1fr);}}
+  .stat{
+    padding:20px 20px 0 0;
+    border-right:1px solid var(--rule-dark);
+  }
+  .ledger-stats .stat:last-child{border-right:none;}
+  .stat .num{
+    font-family:var(--font-display); font-size:1.9rem; color:var(--paper); font-weight:500;
+  }
+  .stat .num .accent{color:var(--gold);}
+  .stat .label{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.05em;
+    text-transform:uppercase; color:#8FA09B; margin-top:6px;
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section{padding:88px 0;}
+  @media(max-width:640px){section{padding:60px 0;}}
+  .eyebrow{
+    font-family:var(--font-mono); font-size:12px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--gold);
+    display:flex; align-items:center; gap:12px; margin-bottom:16px;
+  }
+  .eyebrow::after{content:''; height:1px; flex:1; background:var(--rule); max-width:60px;}
+  h2.section-title{
+    font-family:var(--font-display); font-weight:500;
+    font-size:clamp(1.7rem,3.2vw,2.4rem);
+    margin:0 0 40px;
+    max-width:20ch;
+  }
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.4fr; gap:56px; align-items:start;}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr; gap:28px;}}
+  .about-figure{
+    aspect-ratio:4/5; background:var(--paper-raised);
+    border:1px solid var(--rule);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); text-align:center;
+    padding:20px; position:relative;
+  }
+  .about-figure .corner{position:absolute; width:14px; height:14px; border:1px solid var(--gold);}
+  .about-figure .corner.tl{top:10px; left:10px; border-width:1px 0 0 1px;}
+  .about-figure .corner.br{bottom:10px; right:10px; border-width:0 1px 1px 0;}
+  .about-text p{font-size:1.05rem; color:var(--ink); margin:0 0 18px;}
+  .about-text p:first-of-type::first-letter{
+    font-family:var(--font-display); font-size:3.1rem; float:left; line-height:0.8;
+    padding:6px 8px 0 0; color:var(--gold);
+  }
+  .highlight{
+    background:linear-gradient(transparent 65%, var(--gold-soft) 65%);
+    padding:0 1px;
+  }
+
+  /* ---------- Experience (case log) ---------- */
+  .case-log{border-top:1px solid var(--rule);}
+  .case{
+    border-bottom:1px solid var(--rule);
+    padding:34px 0;
+    display:grid; grid-template-columns:220px 1fr; gap:32px;
+  }
+  @media(max-width:760px){.case{grid-template-columns:1fr; gap:14px;}}
+  .case-meta{font-family:var(--font-mono);}
+  .case-file-no{
+    font-size:11px; letter-spacing:.06em; color:var(--gold);
+    display:inline-block; margin-bottom:10px;
+    border:1px dashed rgba(185,131,47,0.5);
+    padding:3px 8px;
+  }
+  .case-dates{font-size:12.5px; color:var(--ink-soft);}
+  .case-body h3{
+    font-family:var(--font-display); font-weight:500; font-size:1.35rem; margin:0 0 4px;
+  }
+  .case-company{
+    font-family:var(--font-mono); font-size:12.5px; color:var(--teal);
+    text-transform:uppercase; letter-spacing:.04em; margin-bottom:14px;
+  }
+  .case-body ul{margin:0; padding-left:20px;}
+  .case-body li{margin-bottom:8px; color:var(--ink); font-size:.98rem;}
+  .case-body li::marker{color:var(--gold);}
+
+  /* ---------- Skills ---------- */
+  .skills-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--rule); border:1px solid var(--rule);
+  }
+  @media(max-width:760px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
+  .skill-card{background:var(--paper); padding:26px 22px;}
+  .skill-card h4{
+    font-family:var(--font-mono); font-size:11.5px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--gold); margin:0 0 12px;
+  }
+  .skill-card p{margin:0; font-size:.93rem; color:var(--ink-soft); line-height:1.6;}
+
+  /* ---------- Projects ---------- */
+  .projects-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  @media(max-width:700px){.projects-grid{grid-template-columns:1fr;}}
+  .project-card{
+    background:var(--navy-deep-2); color:var(--paper);
+    border-radius:3px; padding:28px 26px; display:flex; flex-direction:column;
+    min-height:290px; position:relative; overflow:hidden;
+    text-decoration:none; transition:transform .22s ease, box-shadow .22s ease;
+  }
+  .project-card:hover, .project-card:focus-visible{
+    transform:translateY(-4px);
+    box-shadow:0 14px 30px rgba(16,27,38,0.35);
+  }
+  .project-tags{
+    font-family:var(--font-mono); font-size:10.5px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--gold-soft); margin-bottom:18px;
+    display:flex; flex-wrap:wrap; gap:8px;
+  }
+  .project-tags span{border:1px solid rgba(231,198,140,0.3); padding:3px 8px; border-radius:2px;}
+  .project-card h3{
+    font-family:var(--font-display); font-weight:500; font-size:1.3rem; margin:0 0 12px; line-height:1.25;
+  }
+  .project-card p{font-size:.92rem; color:#B9C3C1; margin:0 0 24px; flex:1;}
+  .project-link{
+    font-family:var(--font-mono); font-size:12.5px; letter-spacing:.04em;
+    color:var(--gold); text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+    margin-top:auto;
+  }
+  .project-link .arrow{transition:transform .2s ease;}
+  .project-card:hover .arrow{transform:translateX(4px);}
+
+  /* ---------- Education / Certs ---------- */
+  .split-two{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  @media(max-width:760px){.split-two{grid-template-columns:1fr; gap:40px;}}
+  .edu-item{border-left:2px solid var(--gold); padding-left:20px; margin-bottom:28px;}
+  .edu-item h4{font-family:var(--font-display); font-size:1.15rem; margin:0 0 4px; font-weight:500;}
+  .edu-item .school{font-family:var(--font-mono); font-size:12px; color:var(--teal); text-transform:uppercase; letter-spacing:.04em; margin-bottom:4px;}
+  .edu-item .dates{font-family:var(--font-mono); font-size:11.5px; color:var(--ink-soft);}
+  .edu-item p{margin:8px 0 0; font-size:.92rem; color:var(--ink-soft);}
+
+  .cert-proof-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;}
+  @media(max-width:480px){.cert-proof-grid{grid-template-columns:1fr;}}
+  .cert-proof-card{
+    display:block; text-decoration:none; color:var(--ink);
+    border:1px solid var(--rule); background:var(--paper);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .cert-proof-card:hover, .cert-proof-card:focus-visible{
+    transform:translateY(-3px); box-shadow:0 10px 24px rgba(21,36,48,0.14);
+  }
+  .cert-proof-card .cert-thumb-wrap{
+    aspect-ratio:1.29/1; overflow:hidden; border-bottom:1px solid var(--rule);
+    background:var(--paper-raised);
+  }
+  .cert-proof-card img{width:100%; height:100%; object-fit:cover; object-position:top;}
+  .cert-proof-card .cert-caption{
+    padding:12px 14px; display:flex; align-items:center; justify-content:space-between; gap:8px;
+  }
+  .cert-proof-card .cert-caption .name{font-size:.85rem; font-weight:600; line-height:1.3;}
+  .cert-proof-card .cert-caption .view{
+    font-family:var(--font-mono); font-size:10.5px; letter-spacing:.05em;
+    color:var(--gold); text-transform:uppercase; flex-shrink:0;
+  }
+  .cert-list{list-style:none; margin:0; padding:0;}
+  .cert-list li{
+    display:flex; align-items:baseline; gap:12px;
+    padding:14px 0; border-bottom:1px solid var(--rule);
+    font-size:.95rem;
+  }
+  .cert-list li .stamp{
+    font-family:var(--font-mono); font-size:10px; letter-spacing:.05em;
+    color:var(--gold); border:1px solid var(--gold); padding:2px 6px; border-radius:2px; flex-shrink:0;
+  }
+  .cert-list li .stamp.pending{color:var(--ink-soft); border-color:var(--rule);}
+
+  /* ---------- Contact ---------- */
+  .contact-section{background:var(--navy-deep); color:var(--paper);}
+  .contact-inner{text-align:center; max-width:640px; margin:0 auto;}
+  .contact-inner .eyebrow{justify-content:center;}
+  .contact-inner .eyebrow::after{display:none;}
+  .contact-inner h2{
+    font-family:var(--font-display); font-weight:500;
+    font-size:clamp(1.9rem,4vw,2.8rem); margin:0 0 20px;
+  }
+  .contact-inner p{color:#B9C3C1; font-size:1.05rem; margin:0 0 40px;}
+  .contact-links{display:flex; flex-wrap:wrap; justify-content:center; gap:16px;}
+  .contact-link{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--font-mono); font-size:13px;
+    border:1px solid rgba(238,241,238,0.25); border-radius:2px;
+    padding:14px 20px; text-decoration:none; color:var(--paper);
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .contact-link:hover{border-color:var(--gold); background:rgba(185,131,47,0.08);}
+
+  footer{
+    background:var(--navy-deep); color:#7C8B87;
+    text-align:center; padding:28px 0 40px; font-family:var(--font-mono); font-size:11.5px;
+    letter-spacing:.04em; border-top:1px solid var(--rule-dark);
+  }
+
+  .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top">BPJ<span>·</span>PORTFOLIO</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div class="file-tag">Case File · Open for Opportunities</div>
+    <h1>Bhanu Prakash<br>Jajapuram</h1>
+    <p class="role-line">BUSINESS PROCESS ANALYST · DATA &amp; POWER BI ANALYST</p>
+    <p class="lede">I trace the pattern behind the numbers — from flagging fraud on a live UK banking platform to building the Power BI dashboards that decide what happens next. 3+ years across operations, consulting and retail analytics.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projects">View Projects</a>
+      <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="ledger-stats">
+      <div class="stat"><div class="num"><span class="accent">3+</span> Yrs</div><div class="label">Ops, BA &amp; Analytics Experience</div></div>
+      <div class="stat"><div class="num">4</div><div class="label">Portfolio Analytics Projects</div></div>
+      <div class="stat"><div class="num">30<span class="accent">%</span></div><div class="label">Manual Reporting Time Cut</div></div>
+      <div class="stat"><div class="num">FCA</div><div class="label">Regulated Banking Environment</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">Profile</div>
+    <div class="about-grid">
+      <div class="about-figure reveal" style="padding:0;">
+  <img src="assets/Profile.jpg" alt="Bhanu Prakash Jajapuram" style="width:100%; height:100%; object-fit:cover;">
+  <div class="corner tl"></div>
+  <div class="corner br"></div>
+</div>
+      <div class="about-text reveal">
+        <p>I'm a Business Process Analyst with a career that started in frontline operations and consulting, and has steadily pulled toward data. Most recently I handled escalated cases, fraud detection and identity-theft reporting on the <span class="highlight">NatWest Group account at Teleperformance UK</span>, working intake, chat and email queues inside a highly regulated, FCA-compliant environment.</p>
+        <p>That case-investigation instinct — look for the pattern, flag the anomaly, explain it clearly — is what carried into my analytics work. On live client engagements at <span class="highlight">PwC UK's Change and Transformation Academy</span>, I built Power BI dashboards for a public transport infrastructure project and ran business analysis on a confidential AI-driven healthcare system, applying ADKAR change management, RACI stakeholder mapping and risk registers along the way.</p>
+        <p>I hold an MSc in Business Analytics from Queen's University Belfast, with a distinction-grade dissertation on retail sales forecasting, and I'm currently working through the PL-300 (Power BI Data Analyst Associate) certification. Outside client work, I build end-to-end analytics projects — from raw Kaggle data to a finished Power BI dashboard — to keep my SQL, Python and DAX sharp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--paper-raised);">
+  <div class="wrap">
+    <div class="eyebrow">Case Log</div>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="case-log">
+
+      <div class="case reveal">
+        <div class="case-meta">
+          <span class="case-file-no">FILE · NATWEST</span><br>
+          <span class="case-dates">Sep 2025 – Feb 2026</span>
+        </div>
+        <div class="case-body">
+          <h3>Operations Expert — Fraud &amp; Customer Operations</h3>
+          <div class="case-company">Teleperformance (NatWest Group), UK · Full-time · Hybrid</div>
+          <ul>
+            <li>Managed escalated and exceptional customer cases across intake, chat and email channels to prescribed turnaround times, on a large-scale UK banking platform within a highly regulated, FCA-compliant environment.</li>
+            <li>Identified and reported fraud and identity-theft cases, applying pattern recognition and structured investigation steps to flag anomalies for risk and compliance teams.</li>
+            <li>Used Excel to look up and cross-reference customer account data across multiple sources, supporting accurate, timely case resolution.</li>
+            <li>Maintained strict adherence to data governance, confidentiality and security standards throughout all customer and stakeholder interactions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-meta">
+          <span class="case-file-no">FILE · PWC</span><br>
+          <span class="case-dates">Nov 2024 – Feb 2025</span>
+        </div>
+        <div class="case-body">
+          <h3>Business Analyst</h3>
+          <div class="case-company">PwC Change and Transformation Academy, UK · Contract · On-site, Belfast</div>
+          <ul>
+            <li>Developed and maintained Power BI dashboards tracking 10,000+ customer records on a major public transport infrastructure project, presenting performance insights to internal stakeholders.</li>
+            <li>Conducted business analysis for a confidential AI-driven healthcare information system for a public-sector client in Scotland — stakeholder analysis, risk register and project roadmap for a patient-care dashboard rollout.</li>
+            <li>Applied Change Management (ADKAR), Stakeholder Mapping (RACI), Risk Registers and SWOT Analysis across two live client projects.</li>
+            <li>Analysed and validated 50+ datasets using Advanced Excel and SQL to support reporting and data-quality checks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-meta">
+          <span class="case-file-no">FILE · TESCO</span><br>
+          <span class="case-dates">Sep 2023 – Sep 2025</span>
+        </div>
+        <div class="case-body">
+          <h3>Retail Operations Associate</h3>
+          <div class="case-company">Tesco, UK · On-site</div>
+          <ul>
+            <li>Tracked inventory, sales and wastage data across store departments using Advanced Excel (Pivot Tables, Power Query) to support operational decisions across 500+ SKUs.</li>
+            <li>Monitored weekly sales volumes of approximately £50,000, analysing transaction trends to identify demand spikes and support planning.</li>
+            <li>Built Excel reports to monitor stock levels and sales trends, flagging discrepancies to management — drove an 8–10% increase in whole-store sales over one quarter by promoting high-demand products at peak trading periods.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-meta">
+          <span class="case-file-no">FILE · T3 SPORTS</span><br>
+          <span class="case-dates">Jun 2021 – Jun 2022</span>
+        </div>
+        <div class="case-body">
+          <h3>Data &amp; Operations Analyst</h3>
+          <div class="case-company">T3 Sports, India · Full-time · Remote</div>
+          <ul>
+            <li>Owned data end-to-end across sales, inventory and procurement as the primary data and operations resource in a small import and retail trading business.</li>
+            <li>Created Excel and Power BI dashboards to track sales turnover, SKU-level inventory and demand trends, cutting manual reporting time by 30%.</li>
+            <li>Identified and resolved data inconsistencies across product and order records, improving overall reporting reliability.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-meta">
+          <span class="case-file-no">FILE · TEACH FOR INDIA</span><br>
+          <span class="case-dates">Jun 2020 – Sep 2020</span>
+        </div>
+        <div class="case-body">
+          <h3>Data &amp; Research Analyst (Volunteer)</h3>
+          <div class="case-company">Teach For India</div>
+          <ul>
+            <li>Supported data collection and performance analysis to enhance tracking of student learning outcomes across multiple classrooms, using Google Sheets and Excel.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Toolkit</div>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>Data &amp; Visualisation</h4>
+        <p>Power BI (DAX, Power Query, Data Modelling, RLS, Drill-throughs), Tableau, SQL (JOINs, CTEs, Aggregations), Advanced Excel (VLOOKUP, Pivot Tables)</p>
+      </div>
+      <div class="skill-card">
+        <h4>Business Analysis</h4>
+        <p>Requirements Gathering, Process Mapping, Change Management (ADKAR), Stakeholder Mapping (RACI), Risk Registers, Gap Analysis, SWOT</p>
+      </div>
+      <div class="skill-card">
+        <h4>Operations &amp; Investigation</h4>
+        <p>Escalated Case Management, Fraud &amp; Identity-Theft Case Investigation, Incident Tracking, Cross-Functional Communication, VP/Director-Level Reporting</p>
+      </div>
+      <div class="skill-card">
+        <h4>Regulatory &amp; Compliance</h4>
+        <p>FCA-Regulated Environment, Data Governance, Confidentiality &amp; Security Standards</p>
+      </div>
+      <div class="skill-card">
+        <h4>Programming</h4>
+        <p>Python (Pandas), R, Microsoft Access, ETL &amp; Data Cleaning</p>
+      </div>
+      <div class="skill-card">
+        <h4>Tools</h4>
+        <p>Jira, Power Automate, Excel VBA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:var(--paper-raised);">
+  <div class="wrap">
+    <div class="eyebrow">Evidence</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+
+      <a class="project-card reveal" href="https://github.com/bhanu0-1/Europe-Credit-Card-Fraud-Pattern-Analysis" target="_blank" rel="noopener">
+        <div class="project-tags"><span>PostgreSQL</span><span>Python</span><span>Power BI</span></div>
+        <h3>European Credit Card Fraud Pattern Analysis</h3>
+        <p>Investigated the ULB Kaggle fraud dataset end-to-end — PostgreSQL for querying, Python for analysis, Power BI for reporting — anchored by a Monte Carlo-validated clustering finding that pinpoints the transaction patterns most associated with fraud.</p>
+        <span class="project-link">View on GitHub <span class="arrow">→</span></span>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/bhanu0-1/Quick-Commerce-Delivery-Analytics" target="_blank" rel="noopener">
+        <div class="project-tags"><span>PostgreSQL</span><span>Python</span><span>Power BI</span></div>
+        <h3>Q-Commerce Delivery Operations &amp; Pricing Analytics</h3>
+        <p>Built a PostgreSQL star schema over a ~1M-row quick-commerce dataset, cleaned it with Python, and designed a custom dark-themed Power BI report covering delivery operations, pricing and discount performance.</p>
+        <span class="project-link">View on GitHub <span class="arrow">→</span></span>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/bhanu0-1/Financial-Performance-Ratio-Analysis" target="_blank" rel="noopener">
+        <div class="project-tags"><span>Excel</span><span>Python</span><span>Power BI</span></div>
+        <h3>Financial Performance &amp; Ratio Analysis</h3>
+        <p>An FP&amp;A-style project built on 10-K financial statements of major companies (2009–2023) — profitability, liquidity and solvency ratio analysis in Excel and Python, visualised in Power BI, framed for a Financial Analyst audience.</p>
+        <span class="project-link">View on GitHub <span class="arrow">→</span></span>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/bhanu0-1/UK-Industry-Spend-Dashboard" target="_blank" rel="noopener">
+        <div class="project-tags"><span>Python</span><span>ONS Data</span><span>Power BI</span></div>
+        <h3>UK Industry Spend Dashboard</h3>
+        <p>A reproducible pipeline that reshapes UK ONS Annual Purchases Survey data into tidy monthly industry–product spend figures with Python, then visualises trends, totals and a product-by-industry matrix in a Power BI dashboard with KPI cards.</p>
+        <span class="project-link">View on GitHub <span class="arrow">→</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow">Record</div>
+    <h2 class="section-title">Education &amp; Certifications</h2>
+    <div class="split-two">
+      <div class="reveal">
+        <div class="edu-item">
+          <div class="school">Queen's University Belfast, UK</div>
+          <h4>MSc Business Analytics — Grade 2:1</h4>
+          <div class="dates">2022 – 2024</div>
+          <p>Focus: Business Statistics, Data Management, Data Mining, Machine Learning. Dissertation (Distinction): "Sales Forecasting for a Retail Store" — improved prediction accuracy by 15% using time series modelling in R.</p>
+        </div>
+        <div class="edu-item">
+          <div class="school">Osmania University, Hyderabad</div>
+          <h4>BCom (Hons) — First Class</h4>
+          <div class="dates">2018 – 2021</div>
+          <p>Focus: Business Statistics, Financial Accounting, Management Information Systems.</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="cert-proof-grid">
+          <a class="cert-proof-card" href="assets/certs/bcs-foundation-business-analysis.png" target="_blank" rel="noopener">
+            <div class="cert-thumb-wrap"><img src="assets/certs/bcs-foundation-business-analysis.png" alt="BCS Foundation Certificate in Business Analysis, awarded to Bhanu Prakash Jajapuram, 22 January 2025"></div>
+            <div class="cert-caption"><span class="name">BCS Foundation Certificate in Business Analysis</span><span class="view">View ↗</span></div>
+          </a>
+          <a class="cert-proof-card" href="assets/certs/pmi-project-management-ready.png" target="_blank" rel="noopener">
+            <div class="cert-thumb-wrap"><img src="assets/certs/pmi-project-management-ready.png" alt="PMI Project Management Ready certificate, awarded to Bhanu Prakash Jajapuram, December 2024"></div>
+            <div class="cert-caption"><span class="name">PMI Project Management Ready</span><span class="view">View ↗</span></div>
+          </a>
+        </div>
+        <ul class="cert-list">
+          <li><span class="stamp pending">In Progress</span> Google Data Analytics Professional Certificate</li>
+          <li><span class="stamp pending">In Progress</span> Microsoft PL-300: Power BI Data Analyst Associate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap contact-inner">
+    <div class="eyebrow">Close the File</div>
+    <h2>Let's talk about what the data's telling us.</h2>
+    <p>Open to Business Analyst, Data Analyst and Power BI Developer roles — in India, the UK and Ireland.</p>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:bhanujajapuram@gmail.com">✉ bhanujajapuram@gmail.com</a>
+      <a class="contact-link" href="https://linkedin.com/in/bhanujajapuram02/" target="_blank" rel="noopener">in LinkedIn</a>
+      <a class="contact-link" href="https://github.com/bhanu0-1" target="_blank" rel="noopener">GitHub · bhanu0-1</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Bhanu Prakash Jajapuram · Built for GitHub Pages</div>
+</footer>
+
+<script>
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
